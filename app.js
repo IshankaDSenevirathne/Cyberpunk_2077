@@ -1,11 +1,10 @@
 var masterTimeline = new TimelineMax();
-
-
 function cyberpunk(){
-    var tltop=new TimelineMax();
-    tltop
+    var cyberpunk=new TimelineMax();
+    cyberpunk
         //Setting initial point of the yellow parts
         .set("#C_top",{rotate:15,transformOrigin:"bottom bottom"})
+        .set("#C_bottom",{rotate:5,transformOrigin:"bottom bottom"})
         .set("#Y_top",{rotate:7,transformOrigin:"bottom bottom"})
         .set("#Y_bottom",{y:15,rotate:10,transformOrigin:"bottom bottom"})
         .set("#BER_top",{y:-15,rotate:5,transformOrigin:"bottom bottom"})
@@ -22,22 +21,15 @@ function cyberpunk(){
         .set("#K_top",{y:-20,rotate:-7,transformOrigin:"bottom bottom"})
         .set("#K_bottom_1",{x:6,y:10,rotate:7,transformOrigin:"bottom bottom"})
         .set("#K_bottom_2,#K_bottom_3",{x:6,y:10,rotate:7,transformOrigin:"bottom bottom"})
+        
         //Setting initial point of the blue parts 
-        .set("#C_blue",{opacity:0})
-        .set("#Y_blue",{opacity:0})
-        .set("#BER_blue",{opacity:0})
-        .set("#PU_blue",{opacity:0})
-        .set("#N_blue",{opacity:0})
-        .set("#K_blue",{opacity:0})
-        .set("#n2077",{opacity:0})
+        .set("#C_blue,#Y_blue,#BER_blue,#PU_blue,#N_blue,#K_blue,#n2077",{opacity:0})
 
-        //Rotate Join phase 1
-            //C
+        //Init Rotation
         .to("#C_top",2.1,{rotate:10,transformOrigin:"bottom bottom",ease:"none"},0)
-            //Y
+        .to("#C_bottom",2.1,{rotate:2,transformOrigin:"bottom bottom",ease:"none"},0)
         .to("#Y_top",2.1,{rotate:4,transformOrigin:"bottom bottom",ease:"none"},0)
         .to("#Y_bottom",2.1,{y:6,rotate:4,transformOrigin:"bottom bottom",ease:"none"},0)
-            //BER
         .to("#BER_top",2.1,{y:-7,rotate:3,transformOrigin:"bottom bottom",ease:"none"},0)
         .to("#B_bottom",2.1,{y:6,rotate:-3,transformOrigin:"bottom bottom",ease:"none"},0)
         .to("#E_bottom_1,#E_bottom_2",2.1,{y:6,rotate:-3,transformOrigin:"bottom bottom",ease:"none"},0)
@@ -53,16 +45,15 @@ function cyberpunk(){
         .to("#K_bottom_1",2.1,{x:3,y:5,rotate:3,transformOrigin:"bottom bottom",ease:"none"},0)
         .to("#K_bottom_2,#K_bottom_3",2.1,{x:3,y:5,rotate:3,transformOrigin:"bottom bottom",ease:"none"},0)
         
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
         //Flicker phase 1 (Rotational increase)
-            //C
         .to("#C_top",0.001,{rotate:19,transformOrigin:"bottom bottom",ease:"none"})
-            //Y
+        .to("#C_bottom",0.001,{rotate:6,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
         .to("#Y_top",0.001,{rotate:9,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
         .to("#Y_bottom",0.001,{x:12,y:17,rotate:9,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
-            //BER
         .to("#BER_top",0.001,{y:-12,rotate:7,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
         .to("#B_bottom",0.001,{y:12,rotate:-9,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
         .to("#E_bottom_1,#E_bottom_2",0.001,{y:12,rotate:-9,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
@@ -78,16 +69,15 @@ function cyberpunk(){
         .to("#K_bottom_1",0.001,{x:8,y:12,rotate:8,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
         .to("#K_bottom_2,#K_bottom_3",0.001,{x:8,y:12,rotate:8,transformOrigin:"bottom bottom",ease:"none"},'-=0.001')
 
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
         //Flicker phase 2 (Rotational decrease)
-            //C
-        .to("#C_top",0.006,{rotate:5,transformOrigin:"bottom bottom",ease:"none"})
-            //Y
+        .to("#C_top",0.006,{rotate:5,transformOrigin:"bottom bottom",ease:"none"},'+=0.1')
+        .to("#C_bottom",0.006,{rotate:3,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
         .to("#Y_top",0.006,{rotate:3,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
         .to("#Y_bottom",0.006,{x:-9,y:9,rotate:3,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
-            //BER
         .to("#BER_top",0.006,{y:-9,rotate:4,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
         .to("#B_bottom",0.006,{y:4,rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
         .to("#E_bottom_1,#E_bottom_2",0.006,{y:4,rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
@@ -103,16 +93,15 @@ function cyberpunk(){
         .to("#K_bottom_1",0.006,{x:3,y:6,rotate:3,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
         .to("#K_bottom_2,#K_bottom_3",0.006,{x:3,y:6,rotate:3,transformOrigin:"bottom bottom",ease:"none"},'-=0.006')
 
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
         //Flicker phase 3 (Rotational increase)
-            //C
         .to("#C_top",0.007,{rotate:15,transformOrigin:"bottom bottom",ease:"none"})
-            //Y
+        .to("#C_bottom",0.007,{rotate:5,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')
         .to("#Y_top",0.007,{rotate:7,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')
         .to("#Y_bottom",0.007,{x:0,y:10,rotate:7,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')
-            //BER
         .to("#BER_top",0.007,{y:-12,rotate:6,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')  
         .to("#B_bottom",0.007,{y:7,rotate:-4,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')
         .to("#E_bottom_1,#E_bottom_2",0.007,{y:7,rotate:-4,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')
@@ -128,85 +117,37 @@ function cyberpunk(){
         .to("#K_bottom_1",0.007,{x:6,y:12,rotate:7,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')
         .to("#K_bottom_2,#K_bottom_3",0.007,{x:6,y:12,rotate:7,transformOrigin:"bottom bottom",ease:"none"},'-=0.007')
 
-
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
         //Blue Yellow glitch
             //Yellow components opacity:0
-        .to("#C_top",0,{opacity:0,ease:"none"})
-        .to("#C_bottom",0,{opacity:0,ease:"none"})
-        .to("#Y_top",0,{opacity:0,ease:"none"})
-        .to("#Y_bottom",0,{opacity:0,ease:"none"})
-        .to("#BER_top",0,{opacity:0,ease:"none"})
-        .to("#B_bottom",0,{opacity:0,ease:"none"})
-        .to("#E_bottom_1,#E_bottom_2",0,{opacity:0,ease:"none"})
-        .to("#R_bottom",0,{opacity:0,ease:"none"})
-        .to("#P_top",0,{opacity:0,ease:"none"})
-        .to("#P_bottom",0,{opacity:0,ease:"none"})
-        .to("#U_top",0,{opacity:0,ease:"none"})
-        .to("#U_bottom",0,{opacity:0,ease:"none"})
-        .to("#N_top,#N_bottom_1",0,{opacity:0,ease:"none"})
-        .to("#N_bottom_2",0,{opacity:0,ease:"none"})
-        .to("#N_bottom_3",0,{opacity:0,ease:"none"})
-        .to("#K_top",0,{opacity:0,ease:"none"})
-        .to("#K_bottom_1",0,{opacity:0,ease:"none"})
-        .to("#K_bottom_2",0,{opacity:0,ease:"none"})
-        .to("#K_bottom_3",0,{opacity:0,ease:"none"})
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0,{opacity:0,ease:"none"})
+       
             //Blue compnents opacity:1
-        .to("#C_blue",0.08,{opacity:1,ease:"none"})
-        .to("#Y_blue",0.08,{opacity:1,ease:"none"},'-=0.08')
-        .to("#BER_blue",0.08,{opacity:1,ease:"none"},'-=0.08')
-        .to("#PU_blue",0.08,{opacity:1,ease:"none"},'-=0.08')
-        .to("#N_blue",0.08,{opacity:1,ease:"none"},'-=0.08')
-        .to("#K_blue",0.08,{opacity:1,ease:"none"},'-=0.08')
+        .to("#C_blue,#Y_blue,#BER_blue,#PU_blue,#N_blue,#K_blue",0.08,{opacity:1,ease:"none"})
             //Blue components opacity:0
-        .to("#C_blue",0.08,{opacity:0,ease:"none"})
-        .to("#Y_blue",0.08,{opacity:0,ease:"none"},'-=0.08')
-        .to("#BER_blue",0.08,{opacity:0,ease:"none"},'-=0.08')
-        .to("#PU_blue",0.08,{opacity:0,ease:"none"},'-=0.08')
-        .to("#N_blue",0.08,{opacity:0,ease:"none"},'-=0.08')
-        .to("#K_blue",0.08,{opacity:0,ease:"none"},'-=0.08')
+        .to("#C_blue,#Y_blue,#BER_blue,#PU_blue,#N_blue,#K_blue",0.08,{opacity:0,ease:"none"})
             //Yellow components opacity:1
-        .to("#C_top",0.02,{opacity:1,ease:"none"})
-        .to("#C_bottom",0.02,{opacity:1,ease:"none"},'-=0.02')
-        .to("#Y_top",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#Y_bottom",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#BER_top",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#B_bottom",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#E_bottom_1,#E_bottom_2",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#R_bottom",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#P_top",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#P_bottom",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#U_top",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#U_bottom",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#N_top,#N_bottom_1",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#N_bottom_2",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#N_bottom_3",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#K_top",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#K_bottom_1",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#K_bottom_2",0.02,{opacity:1,ease:"none"},'-=0.04')
-        .to("#K_bottom_3",0.02,{opacity:1,ease:"none"},'-=0.04')
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0.02,{opacity:1,ease:"none"})
 
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
         //Flicker phase 4 (Rotational decrease)
-            //C
-        .to("#C_top",2.1,{rotate:7,transformOrigin:"bottom bottom",ease:"none"})
-            //Y
+        .to("#C_top",2.1,{rotate:7,transformOrigin:"bottom bottom",ease:"none"},'+=0.1')
+        .to("#C_bottom",2.1,{rotate:1,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
         .to("#Y_top",2.1,{rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
         .to("#Y_bottom",2.1,{y:2,rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
-            //BER
         .to("#BER_top",2.1,{y:-4,rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
-            //B
         .to("#B_bottom",2.1,{y:2,rotate:-2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
-            //E
         .to("#E_bottom_1,#E_bottom_2",2.1,{y:2,rotate:-2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
-            //R
         .to("#R_bottom",2.1,{y:-2,rotate:-1,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
         .to("#P_top",2.1,{y:-3,rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
         .to("#P_bottom",2.1,{y:4,rotate:1,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
@@ -220,11 +161,13 @@ function cyberpunk(){
         .to("#K_bottom_2",2.1,{x:2,y:3,rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
         .to("#K_bottom_3",2.1,{x:2,y:3,rotate:2,transformOrigin:"bottom bottom",ease:"none"},'-=2.1')
 
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
         //Flicker phase 5 (Rotational increase)
         .to("#C_top",0.01,{rotate:12,transformOrigin:"bottom bottom",ease:"none"})
+        .to("#C_bottom",0.01,{rotate:3,transformOrigin:"bottom bottom",ease:"none"},'-=0.01')
         .to("#Y_top",0.01,{rotate:3,transformOrigin:"bottom bottom",ease:"none"},'-=0.01')
         .to("#Y_bottom",0.01,{y:6,rotate:-4,transformOrigin:"bottom bottom",ease:"none"},'-=0.01')
         .to("#BER_top",0.01,{y:-8,rotate:4,transformOrigin:"bottom bottom",ease:"none"},'-=0.01')
@@ -243,74 +186,37 @@ function cyberpunk(){
         .to("#K_bottom_2,#K_bottom_3",0.01,{x:6,y:10,rotate:5,transformOrigin:"bottom bottom",ease:"none"},'-=0.01')
 
         //Rejoin of Yellow components
-        .to("#C_top",1.61,{rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut})
-        .to("#Y_top",1.61,{rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#Y_bottom",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#BER_top",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#B_bottom",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#E_bottom_1,#E_bottom_2",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#R_bottom",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#P_top",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#P_bottom",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#U_top",1.61,{x:0,y:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#U_bottom",1.61,{y:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#N_top,#N_bottom_1",1.61,{x:0,y:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#N_bottom_2",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#N_bottom_3",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#K_top",1.61,{y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#K_bottom_1",1.61,{x:0,y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#K_bottom_2",1.61,{x:0,y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
-        .to("#K_bottom_3",1.61,{x:0,y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut},'-=1.61')
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",1.61,{x:0,y:0,rotate:0,transformOrigin:"bottom bottom",ease:Power0.easeOut})
 
         //Reappearance of the blue parts
-        .to("#C_blue",0,{opacity:1,ease:"none"})
-        .to("#Y_blue",0,{opacity:1,ease:"none"})
-        .to("#BER_blue",0,{opacity:1,ease:"none"})
-        .to("#PU_blue",0,{opacity:1,ease:"none"})
-        .to("#N_blue",0,{opacity:1,ease:"none"})
-        .to("#K_blue",0,{opacity:1,ease:"none"})
-        
-        .to("#C_blue",0.02,{opacity:0,ease:"none"})
-        .to("#Y_blue",0.02,{opacity:0,ease:"none"})
-        .to("#BER_blue",0.02,{opacity:0,ease:"none"})
-        .to("#PU_blue",0.02,{opacity:0,ease:"none"})
-        .to("#N_blue",0.02,{opacity:0,ease:"none"})
-        .to("#K_blue",0.02,{opacity:0,ease:"none"})
-        
-        .to("#C_blue",0,{opacity:1,ease:"none"})
-        .to("#Y_blue",0,{opacity:1,ease:"none"})
-        .to("#BER_blue",0,{opacity:1,ease:"none"})
-        .to("#PU_blue",0,{opacity:1,ease:"none"})
-        .to("#N_blue",0,{opacity:1,ease:"none"})
-        .to("#K_blue",0,{opacity:1,ease:"none"})
-
-       
-
+        .to("#C_blue,#Y_blue,#BER_blue,#PU_blue,#N_blue,#K_blue",0,{opacity:1,ease:"none"})
+        .to("#C_blue,#Y_blue,#BER_blue,#PU_blue,#N_blue,#K_blue",0.02,{opacity:0,ease:"none"})
+        .to("#C_blue,#Y_blue,#BER_blue,#PU_blue,#N_blue,#K_blue",0,{opacity:1,ease:"none"})
+    
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
+        
+        //Skew logo
         .to("#Cyberpunk2077",0.1,{scale:1.12,transformOrigin:"center center",ease:Power3.easeOut})
+        
+        //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut},'+=0.2')
         .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut});
 
-    return tltop;
+
+    return cyberpunk;
 }
-
-
-       
 function n2077(){
     var tl2077= new TimelineMax();
 
     var _2077 = new TimelineMax();
     _2077
+        //Setting initial attributes 
         .set("#n2077",{opacity:1,scale:1.12})
-        .set("#n0",{opacity:0})
-        .set("#n71",{opacity:0})
-        .set("#n72",{opacity:0})
-        .set("#n72",{opacity:0})
-        .set("#endpoint_1",{opacity:0})
-        .set("#endpoint_2",{opacity:0})
+        .set("#n0,#n71,#n72,#n72,#endpoint_1,#endpoint_2",{opacity:0})
 
-        //number 2
+        //number 2 flicker appearance
         .to("#n2",0.06,{opacity:0,ease:"none"})
         .to("#n2",0.06,{opacity:1,ease:"none"})
         .to("#n2",0.06,{opacity:0,ease:"none"})
@@ -319,7 +225,7 @@ function n2077(){
         .to("#n2",0.06,{opacity:1,ease:"none"})
         .to("#n2",0.06,{opacity:1,ease:"none"})
 
-        //number 0
+        //number 0 flicker appearance
         .to("#n0,#endpoint_1",0.06,{opacity:0,ease:"none"},'+=0.1')
         .to("#n0,#endpoint_1",0.06,{opacity:1,ease:"none"})
         .to("#n0,#endpoint_1",0.06,{opacity:0,ease:"none"})
@@ -328,12 +234,13 @@ function n2077(){
         .to("#n0,#endpoint_1",0.06,{opacity:1,ease:"none"})
         .to("#n0,#endpoint_1",0.06,{opacity:1,ease:"none"})
 
+        //2,0 Skew
         .to("#n2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut},'+=0.2')
         .to("#n2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#n2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#n2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
-        //number 7_1
+        //number 7_1 flicker appearance
         .to("#n71,#endpoint_2",0.06,{opacity:0,ease:"none"},'+=0.1')
         .to("#n71,#endpoint_2",0.06,{opacity:1,ease:"none"})
         .to("#n71,#endpoint_2",0.06,{opacity:0,ease:"none"})
@@ -342,7 +249,7 @@ function n2077(){
         .to("#n71,#endpoint_2",0.06,{opacity:1,ease:"none"})
         .to("#n71,#endpoint_2",0.06,{opacity:1,ease:"none"})
         
-        //number 7_2
+        //number 7_2 flicker appearance
         .to("#n72",0.06,{opacity:0,ease:"none"},'+=0.1')
         .to("#n72",0.06,{opacity:1,ease:"none"})
         .to("#n72",0.06,{opacity:0,ease:"none"})
@@ -351,12 +258,13 @@ function n2077(){
         .to("#n72",0.06,{opacity:1,ease:"none"})
         .to("#n72",0.06,{opacity:1,ease:"none"})
 
-
+        //Repositioning effect
         .to("#n2077",0,{opacity:0,y:20,transformOrigin:"center center",ease:"none"},'+=0.02')
         .to("#n2077",0.02,{opacity:1})
         .to("#n2077",0,{opacity:0,x:5,y:10,transformOrigin:"center center",ease:Power3.easeOut},'+=0.1')
         .to("#n2077",0.02,{opacity:1})
 
+        //Skew effect
         .to("#n2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut},'+=0.02')
         .to("#n2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
         .to("#n2077",0,{opacity:0,x:0,y:0,transformOrigin:"center center",ease:Power3.easeOut})
@@ -364,6 +272,7 @@ function n2077(){
         .to("#n2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut},'+=0.02')
         .to("#n2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut});
     
+    //Skew effect on small particles aling X axis
     var tlParticlesX = new TimelineMax({repeat:-1});
         tlParticlesX
             .to("#particleGroup1",0.02,{skewX:170,ease:"none"})
@@ -378,7 +287,8 @@ function n2077(){
             .to("#particleGroup5",0.02,{skewX:0,ease:"none"})
             .to("#particleGroup6",0.02,{skewX:-200,ease:"none"},0)
             .to("#particleGroup6",0.02,{skewX:0,ease:"none"});
-           
+    
+    //Skew effect on small particles aling Y axis
     var tlParticlesY = new TimelineMax({repeat:-1});
         tlParticlesY
             .to("#particleGroup1",0.01,{y:-10,ease:"none"})
@@ -667,7 +577,7 @@ function n2077(){
             .to("#n2077",0.01,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
 
             .to("#n2077",0.01,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut})
-            .to("#n2077",0.01,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut});
+            .to("#n2077",0.01,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
     
             
     //Timeline for line segment 2
@@ -1119,8 +1029,7 @@ function n2077(){
     
     return tl2077.add(_2077).add(tlParticlesX,0).add(tlParticlesY,0).add(tlLines,0.6);
 }
-  
+
 masterTimeline
     .add(cyberpunk())
     .add(n2077(),'+=0.2')
-    ;

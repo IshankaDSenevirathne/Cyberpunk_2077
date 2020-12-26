@@ -1,6 +1,14 @@
 body,
 html {
-  height: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+.logo {
+  resize: horizontal;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
 }
 body {
   background: #262626;
