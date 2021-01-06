@@ -202,8 +202,19 @@ function cyberpunk(){
         
         //Skew logo
         .to("#Cyberpunk2077",0.02,{skewX:70,transformOrigin:"center center",ease:Power3.easeOut},'+=0.2')
-        .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut});
-
+        .to("#Cyberpunk2077",0.02,{skewX:0,transformOrigin:"center center",ease:Power3.easeOut})
+        
+        //flicker of yellow parts
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0,{opacity:0,ease:"none"},'+=0.1')
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0.02,{opacity:1,ease:"none"})
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0,{opacity:0,ease:"none"},'+=0.08')
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0.02,{opacity:1,ease:"none"})
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0,{opacity:0,ease:"none"},'+=0.1')
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0.02,{opacity:1,ease:"none"})
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0,{opacity:0,ease:"none"},'+=0.08')
+        .to("#C_top,#C_bottom,#Y_top,#Y_bottom,#BER_top,#B_bottom,#E_bottom_1,#E_bottom_2,#R_bottom,#P_top,#P_bottom,#U_top,#U_bottom,#N_top,#N_bottom_1,#N_bottom_2,#N_bottom_3,#K_top,#K_bottom_1,#K_bottom_2,#K_bottom_3",0.02,{opacity:1,ease:"none"});
+    
+        
 
     return cyberpunk;
 }
